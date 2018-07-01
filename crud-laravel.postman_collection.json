@@ -1,0 +1,524 @@
+{
+	"info": {
+		"_postman_id": "16952c20-2c64-4d80-b04c-15a62e0c09d9",
+		"name": "crud-laravel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"description": null,
+			"item": [
+				{
+					"name": "crud.api.com/api/login",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"login\":\"admin\",\n\t\"password\":\"admin\"\n}"
+						},
+						"url": {
+							"raw": "crud.api.com/api/login",
+							"host": [
+								"crud",
+								"api",
+								"com"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						},
+						"description": "Atenticação: gera o token"
+					},
+					"response": []
+				},
+				{
+					"name": "crud.api.com/api/logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9jcnVkLmFwaS5jb21cL2FwaVwvcmVmcmVzaCIsImlhdCI6MTUzMDQzMjc4MiwiZXhwIjoxNTMwNDM2NDAwLCJuYmYiOjE1MzA0MzI4MDAsImp0aSI6InhqN00wUEV2VlF0VHdGRmYiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.3jiA7oPh04EmLC6YwpLobbdoCA1YG4ru48QX9hzM5aY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "crud.api.com/api/logout",
+							"host": [
+								"crud",
+								"api",
+								"com"
+							],
+							"path": [
+								"api",
+								"logout"
+							]
+						},
+						"description": "Logout: invalida o token"
+					},
+					"response": []
+				},
+				{
+					"name": "crud.api.com/api/user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9jcnVkLmFwaS5jb21cL2FwaVwvbG9naW4iLCJpYXQiOjE1MzA0NzAwNTYsImV4cCI6MTUzMDQ3MzY1NiwibmJmIjoxNTMwNDcwMDU2LCJqdGkiOiJVaUVUWE0zTnNWRDZUZmtGIiwic3ViIjoxLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.Sdtv2kjW6plw9tb8FKU1OX-5SwHZ-es0u2cd9XUJbVc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "crud.api.com/api/user",
+							"host": [
+								"crud",
+								"api",
+								"com"
+							],
+							"path": [
+								"api",
+								"user"
+							]
+						},
+						"description": "Informações do usuário logado"
+					},
+					"response": []
+				},
+				{
+					"name": "crud.api.com/api/refresh",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9jcnVkLmFwaS5jb21cL2FwaVwvbG9naW4iLCJpYXQiOjE1MzA0MzI3ODIsImV4cCI6MTUzMDQzNjM4MiwibmJmIjoxNTMwNDMyNzgyLCJqdGkiOiI3SXBhQ09iRml3MmZVNW9mIiwic3ViIjoxLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.rxyIYqRUeuoFKxRaX5V6V8GpWwebhTWuLtMPFqDGiN0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "crud.api.com/api/refresh",
+							"host": [
+								"crud",
+								"api",
+								"com"
+							],
+							"path": [
+								"api",
+								"refresh"
+							]
+						},
+						"description": "Gera outro token, invalida o antigo"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "products",
+			"description": "",
+			"item": [
+				{
+					"name": "crud.api.com/api/products",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9jcnVkLmFwaS5jb21cL2FwaVwvYWRtaW5cL2xvZ2luIiwiaWF0IjoxNTMwNDMxOTkxLCJleHAiOjE1MzA0MzU1OTEsIm5iZiI6MTUzMDQzMTk5MSwianRpIjoiS1ZCOUVEV0kzS1lEUnRNTSIsInN1YiI6MSwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.ATvpwvlQi7pkj6MUOCp1VtypGOhGGrz5FpFn3XukkRQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Higiene\"\n}"
+						},
+						"url": {
+							"raw": "crud.api.com/api/products",
+							"host": [
+								"crud",
+								"api",
+								"com"
+							],
+							"path": [
+								"api",
+								"products"
+							]
+						},
+						"description": "Retorna todos os produtos cadastrados"
+					},
+					"response": []
+				},
+				{
+					"name": "crud.api.com/api/products/1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9jcnVkLmFwaS5jb21cL2FwaVwvYWRtaW5cL2xvZ2luIiwiaWF0IjoxNTMwNDMyMTQ1LCJleHAiOjE1MzA0MzU3NDUsIm5iZiI6MTUzMDQzMjE0NSwianRpIjoidFVQcExscW1ETVFvWmMxMiIsInN1YiI6MSwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.q0qAYPz_U2aF9_Ko05ywM6HrIqv_IPEvMLze3Wz5z0k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "crud.api.com/api/products/1",
+							"host": [
+								"crud",
+								"api",
+								"com"
+							],
+							"path": [
+								"api",
+								"products",
+								"1"
+							]
+						},
+						"description": "Retorna um produto específico"
+					},
+					"response": []
+				},
+				{
+					"name": "crud.api.com/api/products",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"cod\": \"B-456\",\n\t\"name\": \"Camisa\",\n\t\"description\": \"Polo cor branca\",\n\t\"price\": 29.99,\n\t\"category_id\":2\n}"
+						},
+						"url": {
+							"raw": "crud.api.com/api/products",
+							"host": [
+								"crud",
+								"api",
+								"com"
+							],
+							"path": [
+								"api",
+								"products"
+							]
+						},
+						"description": "Cadastra um produto"
+					},
+					"response": []
+				},
+				{
+					"name": "crud.api.com/api/products/6",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"description\": \"Cor branca\"\n}"
+						},
+						"url": {
+							"raw": "crud.api.com/api/products/6",
+							"host": [
+								"crud",
+								"api",
+								"com"
+							],
+							"path": [
+								"api",
+								"products",
+								"6"
+							]
+						},
+						"description": "Atualiza um produto"
+					},
+					"response": []
+				},
+				{
+					"name": "crud.api.com/api/products/13",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "crud.api.com/api/products/13",
+							"host": [
+								"crud",
+								"api",
+								"com"
+							],
+							"path": [
+								"api",
+								"products",
+								"13"
+							]
+						},
+						"description": "Exclui um produto"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "categories",
+			"description": "",
+			"item": [
+				{
+					"name": "crud.api.com/api/categories",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Higiene\"\n}"
+						},
+						"url": {
+							"raw": "crud.api.com/api/categories",
+							"host": [
+								"crud",
+								"api",
+								"com"
+							],
+							"path": [
+								"api",
+								"categories"
+							]
+						},
+						"description": "Retorna todas as categorias cadastradas"
+					},
+					"response": []
+				},
+				{
+					"name": "crud.api.com/api/categories/1",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"cod\": \"B-456\",\n\t\"name\": \"Camisa\",\n\t\"description\": \"Polo cor branca\",\n\t\"price\": 29.99,\n\t\"category_id\":2\n}"
+						},
+						"url": {
+							"raw": "crud.api.com/api/categories/1",
+							"host": [
+								"crud",
+								"api",
+								"com"
+							],
+							"path": [
+								"api",
+								"categories",
+								"1"
+							]
+						},
+						"description": "Retorna uma categoria específica"
+					},
+					"response": []
+				},
+				{
+					"name": "crud.api.com/api/categories/1/products",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Higiene\"\n}"
+						},
+						"url": {
+							"raw": "crud.api.com/api/categories/1/products",
+							"host": [
+								"crud",
+								"api",
+								"com"
+							],
+							"path": [
+								"api",
+								"categories",
+								"1",
+								"products"
+							]
+						},
+						"description": "Retorna todos os produtos de uma determinada categoria"
+					},
+					"response": []
+				},
+				{
+					"name": "crud.api.com/api/categories",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Brinquedos\"\n}"
+						},
+						"url": {
+							"raw": "crud.api.com/api/categories",
+							"host": [
+								"crud",
+								"api",
+								"com"
+							],
+							"path": [
+								"api",
+								"categories"
+							]
+						},
+						"description": "Cadastra uma categoria"
+					},
+					"response": []
+				},
+				{
+					"name": "crud.api.com/api/categories/4",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Higiene\"\n}"
+						},
+						"url": {
+							"raw": "crud.api.com/api/categories/4",
+							"host": [
+								"crud",
+								"api",
+								"com"
+							],
+							"path": [
+								"api",
+								"categories",
+								"4"
+							]
+						},
+						"description": "Atualiza uma categoria"
+					},
+					"response": []
+				},
+				{
+					"name": "crud.api.com/api/categories/5",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Higiene\"\n}"
+						},
+						"url": {
+							"raw": "crud.api.com/api/categories/5",
+							"host": [
+								"crud",
+								"api",
+								"com"
+							],
+							"path": [
+								"api",
+								"categories",
+								"5"
+							]
+						},
+						"description": "Exclui uma categoria"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
